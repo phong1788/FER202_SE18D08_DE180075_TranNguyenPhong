@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bai 5 - Students Detail</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        /* Điều chỉnh ảnh nhóm ở header */
+        .header-img {
+            width: 100%;
+            background-color: #f4a261;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .header-img img {
+            width: 100%;
+            max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+            height: auto; /* Giữ tỷ lệ hình ảnh */
+            margin: 0 auto;
+            display: block;
+        }
+        /* Điều chỉnh ảnh cá nhân trong card */
+        .card-img-top {
+            width: 100%;
+            height: 300px; /* Tăng chiều cao ảnh cá nhân */
+            object-fit: cover; /* Giữ tỷ lệ, cắt phần thừa */
+            object-position: center; /* Căn giữa */
+        }
+        /* Điều chỉnh card */
+        .card {
+            width: 100%;
+            max-width: 450px; /* Tăng kích thước card */
+            margin: 0 auto; /* Căn giữa card trong cột */
+        }
+        .footer {
+            background-color: #f4a261;
+            padding: 15px 0;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header với ảnh nhóm -->
+    <div class="header-img">
+        <img src="images/group_photo.jpg" alt="FPT University Group" onerror="this.src='https://via.placeholder.com/1200x400?text=Group+Photo';">
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="container my-5">
+        <h2 class="text-center mb-5">Students Detail</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/student1.jpg" alt="Trần Nguyễn Phong" class="card-img-top" onerror="this.src='https://via.placeholder.com/450x300';">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Trần Nguyễn Phong - DE180075</h5>
+                        <p class="card-text">
+                            <input type="radio" name="phong" value="present"> Present
+                            <input type="radio" name="phong" value="absent" checked> Absent
+                        </p>
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/student2.jpg" alt="Võ Chiêu Quân" class="card-img-top" onerror="this.src='https://via.placeholder.com/450x300';">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Võ Chiêu Quân - DE180121</h5>
+                        <p class="card-text">
+                            <input type="radio" name="quan" value="present" checked> Present
+                            <input type="radio" name="quan" value="absent"> Absent
+                        </p>
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/student3.jpg" alt="Phạm Nguyễn Anh Khoa" class="card-img-top" onerror="this.src='https://via.placeholder.com/450x300';">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Phạm Nguyễn Anh Khoa - DE180042</h5>
+                        <p class="card-text">
+                            <input type="radio" name="khoa" value="present"> Present
+                            <input type="radio" name="khoa" value="absent" checked> Absent
+                        </p>
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/student4.jpg" alt="Hoàng Võ Bảo Khánh" class="card-img-top" onerror="this.src='https://via.placeholder.com/450x300';">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hoàng Võ Bảo Khánh - DE180098</h5>
+                        <p class="card-text">
+                            <input type="radio" name="khanh" value="present" checked> Present
+                            <input type="radio" name="khanh" value="absent"> Absent
+                        </p>
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Our Address</p>
+        <p>123 FPT University, Hanoi, Vietnam</p>
+        <p>
+            <a href="#" class="text-white">G</a>
+            <a href="#" class="text-white">f</a>
+            <a href="#" class="text-white">in</a>
+            <a href="#" class="text-white">tw</a>
+        </p>
+        <p>© Copyright 2023</p>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
