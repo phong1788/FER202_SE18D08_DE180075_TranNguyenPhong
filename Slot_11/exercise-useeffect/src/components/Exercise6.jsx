@@ -28,7 +28,7 @@ function Exercise6() {
     }
     if (!gender) newErrors.gender = "Vui lòng chọn giới tính";
     if (!country) newErrors.country = "Vui lòng chọn quốc gia";
-    if (!agree) newErrors.agree = "Bạn phải đồng ý với điều khoản";
+    if (!agree) newErrors.agree = true;
 
     setErrors(newErrors);
     setIsFormValid(Object.keys(newErrors).length === 0);
