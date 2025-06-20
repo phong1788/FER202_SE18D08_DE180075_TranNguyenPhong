@@ -18,6 +18,12 @@ class QuizApp extends Component {
           question: "What is the largest planet in our solar system?",
           options: ["Jupiter", "Saturn", "Mars", "Earth"],
           answer: "Jupiter"
+        },
+        {
+          id: 3,
+          question: "Messi better than Ronaldo?",
+          options: ["Yes","No","They same"],
+          answer: "Yes"
         }
       ],
       currentQuestion: 0,
