@@ -1,56 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import AddQuestionForm from './AddQuestionForm';
 import Question from './Question';
 import Score from './Score';
 import { Button } from 'react-bootstrap';
+import { QuizProvider, useQuiz } from './QuizContext';
 
-export const quizData = [
-  {
-    question: 'What is ReactJS?',
-    answers: [
-      'A JavaScript library for building user interfaces',
-      'A programming language',
-      'A database management system',
-    ],
-    correctAnswer: 'A JavaScript library for building user interfaces',
-  },
-  {
-    question: 'What is JSX?',
-    answers: [
-      'A programming language',
-      'A file format',
-      'A syntax extension for JavaScript',
-    ],
-    correctAnswer: 'A syntax extension for JavaScript',
-  },
-];
-
-function Quiz() {
-  const [questions, setQuestions] = useState(quizData);
-  const [current, setCurrent] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [score, setScore] = useState(0);
-  const [completed, setCompleted] = useState(false);
-
-  const handleSelectAnswer = (answer) => {
-    setSelectedAnswers((prev) => ({ ...prev, [current]: answer }));
-  };
-
-  const handleNext = () => {
-    if (selectedAnswers[current] === questions[current].correctAnswer) {
-      setScore((prev) => prev + 1);
-    }
-    if (current < questions.length - 1) {
-      setCurrent(current + 1);
-    } else {
-      setCompleted(true);
-    }
-  };
-
-  const handleAddQuestion = (newQ) => {
-    setQuestions((prev) => [...prev, newQ]);
-  };
+function QuizContent() {
+  const {
+    questions,
+    current,
+    selectedAnswers,
+    score,
+    completed,
+    handleSelectAnswer,
+    handleNext,
+    handleAddQuestion,
+  } = useQuiz();
 
   if (completed) {
     return <Score score={score} total={questions.length} />;
@@ -80,6 +46,14 @@ function Quiz() {
         <AddQuestionForm onAddQuestion={handleAddQuestion} />
       </div>
     </Container>
+  );
+}
+
+function Quiz() {
+  return (
+    <QuizProvider>
+      <QuizContent />
+    </QuizProvider>
   );
 }
 

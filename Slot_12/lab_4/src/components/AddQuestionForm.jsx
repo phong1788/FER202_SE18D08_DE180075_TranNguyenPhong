@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Form, Button, Card } from 'react-bootstrap';
+import { useQuiz } from './QuizContext';
 
-function AddQuestionForm({ onAddQuestion }) {
+function AddQuestionForm() {
   const [question, setQuestion] = useState('');
   const [answers, setAnswers] = useState(['', '', '']);
   const [correctAnswer, setCorrectAnswer] = useState('');
+  const { handleAddQuestion } = useQuiz();
 
   const handleAnswerChange = (idx, value) => {
     const updated = [...answers];
@@ -19,7 +21,7 @@ function AddQuestionForm({ onAddQuestion }) {
       answers.every((a) => a) &&
       answers.includes(correctAnswer)
     ) {
-      onAddQuestion({ question, answers, correctAnswer });
+      handleAddQuestion({ question, answers, correctAnswer });
       setQuestion('');
       setAnswers(['', '', '']);
       setCorrectAnswer('');

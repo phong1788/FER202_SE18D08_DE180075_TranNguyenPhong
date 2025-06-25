@@ -1,7 +1,20 @@
 import React from 'react';
 import { Card, ListGroup, Form } from 'react-bootstrap';
+import { useQuiz } from './QuizContext';
 
-function Question({ qIdx, question, answers, selected, onSelect, nextButton }) {
+function Question() {
+  const {
+    questions,
+    current,
+    selectedAnswers,
+    handleSelectAnswer,
+    handleNext,
+  } = useQuiz();
+  const qIdx = current;
+  const question = questions[qIdx].question;
+  const answers = questions[qIdx].answers;
+  const selected = selectedAnswers[qIdx];
+
   return (
     <Card style={{ marginTop: '50px', marginBottom: '10px'}}>
       <Card.Body>
@@ -33,7 +46,7 @@ function Question({ qIdx, question, answers, selected, onSelect, nextButton }) {
                   name={`question-${qIdx}`}
                   value={ans}
                   checked={selected === ans}
-                  onChange={() => onSelect(ans)}
+                  onChange={() => handleSelectAnswer(ans)}
                   style={{
                     marginRight: 12,
                     accentColor: selected === ans ? '#1976d2' : undefined,
@@ -45,7 +58,13 @@ function Question({ qIdx, question, answers, selected, onSelect, nextButton }) {
           </ListGroup>
         </div>
         <div style={{ textAlign: 'left', marginTop: 5, marginLeft: 17 }}>
-          {nextButton}
+          <button
+            onClick={handleNext}
+            disabled={selected == null}
+            className="btn btn-danger"
+          >
+            {qIdx === questions.length - 1 ? 'Finish' : 'Next'}
+          </button>
         </div>
       </Card.Body>
     </Card>
