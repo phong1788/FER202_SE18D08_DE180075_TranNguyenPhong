@@ -25,6 +25,8 @@ function AddQuestionForm() {
       setQuestion('');
       setAnswers(['', '', '']);
       setCorrectAnswer('');
+    } else {
+      alert("Conflix!!");
     }
   };
 

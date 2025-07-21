@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Quiz from "./components/Quiz";
 import Navigation from "./components/Navigation";
 
+
 function App() {
   return (
     <>

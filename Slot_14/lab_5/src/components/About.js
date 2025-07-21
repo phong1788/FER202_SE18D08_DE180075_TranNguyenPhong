@@ -15,7 +15,6 @@ function About() {
       <h3>Team Members:</h3>
       <ul>
         <li>Tran Nguyen Phong (DE180075)</li>
-        {/* Thêm tên các thành viên khác nếu là project nhóm */}
       </ul>
       <p style={{ marginTop: 24 }}>
         Thank you for visiting our website!

@@ -9,11 +9,13 @@ function Contact() {
     const form = event.currentTarget;
     event.preventDefault();
     event.stopPropagation();
+
     if (form.checkValidity() === false || !agreed) {
       setValidated(true);
       return;
     }
-    alert('Form submitted successfully!');
+
+    alert('Submitted successfully!');
     setValidated(false);
     setAgreed(false);
     form.reset();
@@ -27,25 +29,21 @@ function Contact() {
             <Form.Label>First name</Form.Label>
             <Form.Control required type="text" placeholder="First name" />
             <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please enter your first name.
-            </Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">Please enter your first name.</Form.Control.Feedback>
           </Form.Group>
+
           <Form.Group as={Col} md="4" controlId="validationCustom02">
             <Form.Label>Last name</Form.Label>
             <Form.Control required type="text" placeholder="Last name" />
             <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please enter your last name.
-            </Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">Please enter your last name.</Form.Control.Feedback>
           </Form.Group>
+
           <Form.Group as={Col} md="4" controlId="validationCustomUsername">
             <Form.Label>Username</Form.Label>
             <Form.Control required type="text" placeholder="Username" aria-describedby="inputGroupPrepend" />
             <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please enter a username.
-            </Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">Please enter a username.</Form.Control.Feedback>
           </Form.Group>
         </Row>
 
@@ -54,29 +52,25 @@ function Contact() {
             <Form.Label>City</Form.Label>
             <Form.Control type="text" placeholder="City" required />
             <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid city.
-            </Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">Please enter your city.</Form.Control.Feedback>
           </Form.Group>
+
           <Form.Group as={Col} md="4" controlId="validationCustom04">
             <Form.Label>State</Form.Label>
             <Form.Control type="text" placeholder="State" required />
             <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid state.
-            </Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">Please enter your state.</Form.Control.Feedback>
           </Form.Group>
+
           <Form.Group as={Col} md="4" controlId="validationCustom05">
             <Form.Label>Zip</Form.Label>
             <Form.Control type="text" placeholder="Zip" required />
             <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid zip code.
-            </Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">Zip code is required.</Form.Control.Feedback>
           </Form.Group>
         </Row>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-4">
           <Form.Check
             required
             checked={agreed}

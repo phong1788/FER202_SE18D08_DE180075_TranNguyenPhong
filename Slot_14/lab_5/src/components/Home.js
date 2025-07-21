@@ -33,7 +33,7 @@ function Home() {
                 fluid
                 style={{ width: 100, height: 100, objectFit: "cover", border: "2px solid #eee" }}
               />
-              <div style={{ marginTop: 8, fontWeight: "bold", textAlign: "center" }}>{item.label}</div>
+              
             </Col>
           ))}
         </Row>
