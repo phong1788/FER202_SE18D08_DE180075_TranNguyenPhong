@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop LG Gram 2023 14ZD90R-G.AX52A5",
+      "description": "Intel core i5-1340P, Ram 8GB, SSD 256GB, Màn Hình 14 inch WUXGA, Siêu mỏng, siêu nhẹ",
+      "price": "25.990.000",
+      "currentPrice": "20.990.000",
+      "image": "laptop1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Laptop ACER Aspire 3 A315-59-51X8",
+      "description": "Intel Core i5-1235U, Ram 8GB, SSD 512GB, màn hình 15.6 inch FHD, Win 11 bản quyền, màu bạc, chính hãng, bảo hành 12 tháng",
+      "price": "17.990.000",
+      "currentPrice": "11.990.000",
+      "image": "laptop2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Laptop Dell Vostro 5630 i5P085W11GRU",
+      "description": "Intel i5-1340P, Ram 8GB DDR5, SSD 512GB, Màn Hình 16 Inch FHD+, VGA Intel Iris Xe, Windows 11 Home, Office HS 2021 bản quyền, vỏ nhôm",
+      "price": "23.190.000",
+      "currentPrice": "19.990.000",
+      "image": "laptop3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Laptop MSI Katana 15 B13VEK-252VN",
+      "description": "i7-13620H, Ram 8GB, SSD 512GB, màn hình 15.6inch FHD 144Hz, VGA 4050 6GB, Win 11 bản quyền, bảo hành 24 tháng.",
+      "price": "24.990.000",
+      "currentPrice": "22.990.000",
+      "image": "laptop4.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Laptop ASUS TUF Gaming F15 FX507ZC4-HN099W",
+      "description": "i7-12700H, Ram 8GB, SSD 512GB, RTX 3050 4GB, Màn hình 15.6 FHD 144Hz IPS, Win 11, Hàng chính hãng, Bảo hành 24 tháng.",
+      "price": "26.990.000",
+      "currentPrice": "23.490.000",
+      "image": "laptop5.jpg"
+    }
+  ]
+}
